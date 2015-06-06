@@ -1,25 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This webb app searches to create a working web page to generate movie statistics based on user's votes
 
 Things you may want to cover:
 
-* Ruby version
+* It is new and will show in a user friendly way the statistics
 
-* System dependencies
+* Everyone can vote for this statistics
 
-* Configuration
+* Easy to use 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Pre-pre -Alpha build
 
 * ...
 
