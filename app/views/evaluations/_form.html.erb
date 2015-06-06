@@ -1,0 +1,36 @@
+<%= form_for(@evaluation) do |f| %>
+  <% if @evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+      <% @evaluation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_score %><br>
+    <%= f.number_field :user_score , min: 0, max:1 %>
+  </div>
+  <div class="field">
+    <%= f.label :popular_genre %><br>
+    <%= f.text_field :popular_genre %>
+  </div>
+  <div class = "field">
+  <%= f.select :movie_id, Movie.all.map{|m| [m.name,m.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :best_part %><br>
+    <%= f.text_field :best_part %>
+  </div>
+  <div class="field">
+    <%= f.label :worst_part %><br>
+    <%= f.text_field :worst_part %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

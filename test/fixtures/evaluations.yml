@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userScore: 1
+  popularGenre: MyString
+  bestPart: MyString
+  worstPart: MyString
+
+two:
+  userScore: 1
+  popularGenre: MyString
+  bestPart: MyString
+  worstPart: MyString

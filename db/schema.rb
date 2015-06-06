@@ -11,27 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606173420) do
+ActiveRecord::Schema.define(version: 20150606192041) do
+
+  create_table "evaluations", force: :cascade do |t|
+    t.integer  "user_score"
+    t.string   "popular_genre"
+    t.string   "best_part"
+    t.string   "worst_part"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "movie_id"
+    t.integer  "user_id"
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string   "name"
-    t.date     "releaseDate"
-    t.date     "synopsis"
+    t.date     "release_date"
+    t.text     "synopsis"
     t.string   "genre"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "peliculas", force: :cascade do |t|
-    t.integer  "idPeliculas"
-    t.string   "nombre"
-    t.date     "fechaSalida"
-    t.text     "sinposis"
-    t.string   "genero"
-    t.string   "imagen"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

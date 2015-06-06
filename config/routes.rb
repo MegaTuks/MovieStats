@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :movies
+  resources :evaluations
   get 'welcome/index'
 
   devise_for :users

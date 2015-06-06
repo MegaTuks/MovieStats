@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Evaluations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User score</th>
+      <th>Popular genre</th>
+      <th>Best part</th>
+      <th>Worst part</th>
+      <th> user </th>
+      <th> movie </th>
+      <th colspan="3"></th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.user_score %></td>
+        <td><%= evaluation.popular_genre %></td>
+        <td><%= evaluation.best_part %></td>
+        <td><%= evaluation.worst_part %></td>
+        <td><%= evaluation.user_id%></td>
+        <td><%= evaluation.movie_id %></td>
+
+        <td><%= link_to 'Show', evaluation %></td>
+        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evaluation', new_evaluation_path %>

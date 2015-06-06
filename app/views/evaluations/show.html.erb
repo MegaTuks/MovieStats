@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userscore:</strong>
+  <%= @evaluation.user_score %>
+</p>
+
+<p>
+  <strong>Populargenre:</strong>
+  <%= @evaluation.popular_genre %>
+</p>
+
+<p>
+  <strong>Bestpart:</strong>
+  <%= @evaluation.best_part %>
+</p>
+
+<p>
+  <strong>Worstpart:</strong>
+  <%= @evaluation.worst_part %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

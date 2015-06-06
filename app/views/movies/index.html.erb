@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Releasedate</th>
+      <th>Release Date</th>
       <th>Synopsis</th>
       <th>Genre</th>
       <th>Image</th>
@@ -18,10 +18,10 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.name %></td>
-        <td><%= movie.releaseDate %></td>
+        <td><%= movie.release_date %></td>
         <td><%= movie.synopsis %></td>
         <td><%= movie.genre %></td>
-        <td><%= movie.image %></td>
+        <td> <img src= '<%= movie.image %>' width ="50" height ="50"></img></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
